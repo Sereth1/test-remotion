@@ -1,17 +1,22 @@
-import './tailwind.css';
+// src/RemotionRoot.tsx
+import "./tailwind.css";
 import { Composition } from "remotion";
-import { MyComposition } from "./Composition";
+import NameTag from "./components/NameTag";
 
 export const RemotionRoot: React.FC = () => {
   return (
     <>
       <Composition
         id="MyComp"
-        component={MyComposition}
-        durationInFrames={60}
+        component={NameTag}
+        durationInFrames={150}
         fps={30}
         width={1280}
         height={720}
+        defaultProps={{
+          name: "Christopher Fitzgerald",
+          jobTitle: "CEO, Zync.ai",
+        }}
       />
     </>
   );
